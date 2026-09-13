@@ -139,7 +139,7 @@
 
         <!-- Repos Line -->
         <tspan x="870" y="818" class="cc">. </tspan>
-        <tspan x="905" y="818" class="key">Repos</tspan>: <tspan class="value" id="repo_data">16</tspan> {<tspan class="key">Contributed</tspan>: <tspan class="value" id="contrib_data">16</tspan>} | <tspan class="key">Stars</tspan>: <tspan class="value" id="star_data">0</tspan>
+        <tspan x="905" y="818" class="key">Repos</tspan>: <tspan class="value" id="repo_data">17</tspan> {<tspan class="key">Contributed</tspan>: <tspan class="value" id="contrib_data">17</tspan>} | <tspan class="key">Stars</tspan>: <tspan class="value" id="star_data">0</tspan>
 
         <!-- Commits Line -->
         <tspan x="870" y="858" class="cc">. </tspan>
@@ -147,6 +147,6 @@
 
         <!-- Lines of Code Line -->
         <tspan x="870" y="898" class="cc">. </tspan>
-        <tspan x="905" y="898" class="key">Lines of Code on GitHub</tspan>: <tspan class="value" id="loc_data">7,135</tspan> (<tspan class="addColor" id="loc_add">7,636</tspan><tspan class="addColor">++, </tspan><tspan class="delColor" id="loc_del">501</tspan><tspan class="delColor">--)</tspan>
+        <tspan x="905" y="898" class="key">Lines of Code on GitHub</tspan>: <tspan class="value" id="loc_data">7,127</tspan> (<tspan class="addColor" id="loc_add">7,628</tspan><tspan class="addColor">++, </tspan><tspan class="delColor" id="loc_del">501</tspan><tspan class="delColor">--)</tspan>
     </text>
 </svg>

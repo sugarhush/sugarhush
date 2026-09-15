@@ -139,7 +139,7 @@
 
         <!-- Repos Line -->
         <tspan x="870" y="818" class="cc">. </tspan>
-        <tspan x="905" y="818" class="key">Repos</tspan>: <tspan class="value" id="repo_data">17</tspan> {<tspan class="key">Contributed</tspan>: <tspan class="value" id="contrib_data">17</tspan>} | <tspan class="key">Stars</tspan>: <tspan class="value" id="star_data">0</tspan>
+        <tspan x="905" y="818" class="key">Repos</tspan>: <tspan class="value" id="repo_data">18</tspan> {<tspan class="key">Contributed</tspan>: <tspan class="value" id="contrib_data">18</tspan>} | <tspan class="key">Stars</tspan>: <tspan class="value" id="star_data">0</tspan>
 
         <!-- Commits Line -->
         <tspan x="870" y="858" class="cc">. </tspan>

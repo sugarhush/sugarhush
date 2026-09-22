@@ -1,0 +1,65 @@
+name: README build
+
+on:
+  push:
+    branches:
+      - main
+
+  schedule:
+    # Every day at 12:01 AM IST (18:31 UTC, previous day)
+    - cron: "31 18 * * *"
+
+  # Allows manual execution from GitHub Actions
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+
+      - name: Setup Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r cache/requirements.txt
+
+      - name: Show trigger information
+        run: |
+          echo "Event: ${{ github.event_name }}"
+          echo "Branch: ${{ github.ref }}"
+          echo "SHA: ${{ github.sha }}"
+
+      - name: Update README
+        env:
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          USER_NAME: ${{ secrets.USER_NAME }}
+        run: |
+          python today.py
+
+      - name: Commit changes
+        env:
+          GIT_AUTHOR_NAME: heman
+          GIT_AUTHOR_EMAIL: 190758793+sugarhush@users.noreply.github.com
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add .
+
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+            exit 0
+          fi
+
+          git commit -m "Updated README"
+          git push
